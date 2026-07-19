@@ -30,4 +30,4 @@ services:
       - key: ANTHROPIC_API_KEY
         sync: false
       - key: SHOPIFY_APP_URL
-        sync: false
+        value: https://profit-brain-ai.onrender.com

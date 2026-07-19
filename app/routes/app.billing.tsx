@@ -17,6 +17,7 @@ import {
   PRO_PRICE_USD,
   PLAN_FEATURES,
 } from "../services/billing/plans";
+import { resolveShopifyAppUrl } from "../utils/env.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { admin, session } = await authenticate.admin(request);
@@ -30,7 +31,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export const action = async ({ request }: ActionFunctionArgs) => {
   const { admin, session, redirect } = await authenticate.admin(request);
 
-  const appUrl = process.env.SHOPIFY_APP_URL || new URL(request.url).origin;
+  const appUrl = resolveShopifyAppUrl() || new URL(request.url).origin;
   const returnUrl = `${appUrl}/app/billing?billing=success`;
 
   const { confirmationUrl, error } = await createProSubscription(
