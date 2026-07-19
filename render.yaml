@@ -1,0 +1,33 @@
+# Render Blueprint — connect repo: Dashboard → New → Blueprint
+# Starter ($7/mo) + disk = always-on + SQLite persistence (required for Shopify webhooks)
+services:
+  - type: web
+    name: profit-brain-ai
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: profit-brain-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "3000"
+      - key: DATABASE_URL
+        value: file:///data/dev.sqlite
+      - key: SHOPIFY_BILLING_TEST
+        value: "false"
+      - key: SCOPES
+        value: read_products,read_orders,read_customers,read_checkouts,write_products,read_inventory
+      - key: SHOPIFY_API_KEY
+        sync: false
+      - key: SHOPIFY_API_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SHOPIFY_APP_URL
+        sync: false

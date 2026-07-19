@@ -1,0 +1,22 @@
+.cache
+build
+node_modules
+.git
+.env
+.env.*
+*.url
+URLS.txt
+dev.sqlite
+prisma/dev.sqlite
+prisma/dev.sqlite-journal
+
+# Accidental duplicate uploads at repo root (real files live under app/)
+/db.server.ts
+/entry.server.tsx
+/globals.d.ts
+/root.tsx
+/routes.ts
+/shopify.server.ts
+/schema.prisma
+/verify-all.mjs
+/verify-anthropic.mjs
