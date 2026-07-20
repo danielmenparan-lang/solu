@@ -1,0 +1,250 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(165deg, #f6fbf9 0%, #ffffff 45%, #eef7f4 100%);
+  color: #1a1a1a;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+.header {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logoMark {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #008060, #00a47c);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.nav a {
+  color: #008060;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.hero {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 1.5rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  background: #e3f1ed;
+  color: #005a42;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #444;
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.primaryBtn {
+  background: #008060;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondaryBtn {
+  background: #fff;
+  color: #008060;
+  border: 1px solid #b7d9cf;
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.heroCard {
+  background: #fff;
+  border: 1px solid #dfe7e4;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 96, 68, 0.08);
+}
+
+.heroCard h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #eef2f0;
+  font-size: 0.95rem;
+}
+
+.metric strong {
+  color: #008060;
+}
+
+.features {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.feature {
+  background: #fff;
+  border: 1px solid #e7ecea;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.feature h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.feature p {
+  margin: 0;
+  color: #555;
+  font-size: 0.92rem;
+}
+
+.pricing {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.plan {
+  background: #fff;
+  border: 1px solid #e7ecea;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.planPro {
+  border-color: #008060;
+  box-shadow: 0 8px 24px rgba(0, 128, 96, 0.12);
+}
+
+.plan h3 {
+  margin: 0 0 0.35rem;
+}
+
+.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.plan ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #444;
+}
+
+.install {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.installBox {
+  background: #fff;
+  border: 1px solid #dfe7e4;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.installBox label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #cfd8d4;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-top: 1px solid #e3e8e6;
+  color: #555;
+  font-size: 0.92rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: #008060;
+  text-decoration: none;
+}

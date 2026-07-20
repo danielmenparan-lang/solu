@@ -106,7 +106,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
   <h2>Contact</h2>
 
-  <p>For privacy requests, contact the app developer through the Shopify App Store listing support email.</p>
+  <p>For privacy requests, contact <a href="mailto:vonx.support@gmail.com">vonx.support@gmail.com</a> or the Shopify App Store listing support email.</p>
 
 </body>
 
